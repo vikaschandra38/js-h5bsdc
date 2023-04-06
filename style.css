@@ -10,15 +10,29 @@ button {
   margin: 1px;
 }
 
+.selected-item button:hover {
+  background-color: #0062cc;
+}
+
 button.indoor {
   background-color: #998675;
 }
-
 button.outdoor {
   background-color: #333333;
 }
 button.house {
   background-color: #808080;
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 button.showAll {

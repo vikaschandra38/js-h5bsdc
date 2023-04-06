@@ -81,11 +81,12 @@ const house = document.querySelector('.house');
 const displayItems = (event, items) => {
   selectedItem.innerHTML = '';
   showAll.classList.remove('d-none');
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     const button = document.createElement('button');
     button.textContent = item.value;
     button.classList.add(item.type);
     selectedItem.appendChild(button);
+    button.style.animation = 'expand ' + `${index}s ease-in`;
   });
 };
 
